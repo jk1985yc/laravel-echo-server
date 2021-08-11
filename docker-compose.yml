@@ -1,0 +1,12 @@
+version: '3'
+services:
+
+  laravel.echo.server:
+    build: .
+    image: laravel.echo.server-img:0.0.1
+    container_name: laravel.echo.server
+    hostname: laravel.echo.server
+    network_mode: host
+    volumes:
+        - ./app:/app
+    restart: always
